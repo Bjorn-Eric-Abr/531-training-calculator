@@ -1,0 +1,64 @@
+@import 'boiler';
+
+/////// COLORS /////////
+$lightGray : #ECECEC;
+$sandstorm : #F9BF3B;
+$spray : #81CFE0;
+$wistful : #AEA8D3;
+$wisteria : #BE90D4;
+$razzmatazz : #DB0A5B;
+$tahiti : #E87E04;
+
+body {
+	font-family: 'Open Sans';
+	margin: 0 auto;
+}
+
+header, .heading, .weight-input {
+	padding: 2em;
+}
+
+.wave-1 {
+	border-left: 1em solid $sandstorm;
+}
+
+.wave-2 {
+	border-left: 1em solid $tahiti;
+}
+
+.wave-3 {
+	border-left: 1em solid $razzmatazz;
+}
+
+.heading {
+	background: $spray;
+}
+
+.lift {
+	padding: 2em;
+
+	&:nth-child(even) {
+		background: $lightGray;
+	}
+}
+
+.main-lifts {
+	margin-bottom: 1em;
+}
+
+.cell { padding: 1em 0.5em 1em 0; }
+
+
+.span {
+	&-warmup {
+	color: gray;
+}
+
+	&-heading {
+		font-weight: 600;
+	}
+
+	&-final-set {
+		color: red;
+	}
+}
