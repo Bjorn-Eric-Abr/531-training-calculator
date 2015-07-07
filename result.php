@@ -17,22 +17,23 @@
 	<![endif]-->
 </head>
 
-	<?php // include the weeks ?>
 	<?php 
 	  define( 'ROOT_DIR', dirname(__FILE__) );
 	  include(ROOT_DIR.'/includes/functions.php');
 
+	  $currentURL = $_SERVER['REQUEST_URI'];
 
-	  // Edmar it up! (alternating bbb)
-		if(isset($_POST['formWheelchair']) && 
-		   $_POST['formWheelchair'] == 'Yes') 
-		{
-		    $bbb : ;
-		}
-		else
-		{
-		    echo "Do not Need wheelchair access.";
-		}    
+		$pressRM = $_GET['pressRM'];
+		$deadliftRM = $_GET['deadliftRM'];
+		$benchRM = $_GET['benchRM'];
+		$squatRM = $_GET['squatRM'];
+
+	  // Se if we should Edmar
+		if ( isset ($_GET['Edmar']) ) {
+				$Edmar = 'Yes';
+			} else {
+				$Edmar = 'No';
+			} 
 	?> 
 
 
@@ -40,8 +41,11 @@
 	<header>
 		<h1>5 3 1</h1>
 		<h2 class="heading-athlete-name"><?php echo $_GET["name"]; ?></h2>
+		<a href="<?php echo $currentURL ?>">Bookmark this program</a>
 	</header>
 
+
+<!------------------ WAVE 1 ---------------->
 <article class="wave-1">
 	<div class="heading">
 		<h3 class="heading-wave">Wave 1</h3>
@@ -51,43 +55,63 @@
 	<section class="lift">
 	
 		<h3 class="heading-lift">Press</h3>
-		<?php week1( $_GET["pressRM"] );?>
+		<?php 
+			calculateWave( $pressRM, 1, 65, 75, 86 ); 
+			if ( $Edmar == 'Yes' ) {
+				include ROOT_DIR.'/includes/assistance-bench.php';
+			} else {
+				include ROOT_DIR.'/includes/assistance-press.php';	
+			}
+		?>
 
-		<span class="cell span-heading">Assistance: </span>
-		<span class="cell">Lats, Upper Back, Triceps, Biceps</span>
-			
-	</section>
-
-	<section class="lift">
-	
-			<h3 class="heading-lift">Deadlift</h3>
-			<?php week1( $_GET["deadliftRM"] );?>
-	
-			<span class="cell span-heading">Assistance: </span>
-			<span class="cell">Hipthrust, Hamstrings, Lower Back, Abs</span>
-	
 	</section>
 
 	<section class="lift">
 	
-			<h3 class="heading-lift">Bench</h3>
-			<?php week1( $_GET["benchRM"] );?>
-	
-			<span class="cell span-heading">Assistance: </span>
-			<span class="cell">Lats, Upper Back, Triceps, Biceps</span>
+		<h3 class="heading-lift">Deadlift</h3>
+		<?php 
+			calculateWave( $deadliftRM, 1, 65, 75, 86 ); 
+			if ( $Edmar == 'Yes' ) {
+				include ROOT_DIR.'/includes/assistance-squat.php';
+			} else {
+				include ROOT_DIR.'/includes/assistance-deadlift.php';	
+			}
+		?>
 	
 	</section>
-	
+
 	<section class="lift">
 	
-			<h3 class="heading-lift">Squat</h3>
-			<?php week1( $_GET["squatRM"] );?>
+		<h3 class="heading-lift">Bench</h3>
+		<?php 
+			calculateWave( $benchRM, 1, 65, 75, 86 ); 
+			if ( $Edmar == 'Yes' ) {
+				include ROOT_DIR.'/includes/assistance-press.php';
+			} else {
+				include ROOT_DIR.'/includes/assistance-bench.php';	
+			}
+		?>
+
+	</section>
+
+	<section class="lift">
 	
-			<span class="cell span-heading">Assistance: </span>
-			<span class="cell">Hipthrust, Hamstrings, Lower Back, Abs</span>
+		<h3 class="heading-lift">Squat</h3>
+		<?php 
+			calculateWave( $squatRM, 1, 65, 75, 86 ); 
+			if ( $Edmar == 'Yes' ) {
+				include ROOT_DIR.'/includes/assistance-deadlift.php';
+			} else {
+				include ROOT_DIR.'/includes/assistance-squat.php';	
+			}
+		?>
 	
 	</section>
-</article><?php // .wave-1 ?>
+
+</article>
+
+
+<!------------------ WAVE 2 ---------------->
 
 <article class="wave-2">
 	<div class="heading">
@@ -98,43 +122,63 @@
 	<section class="lift">
 	
 		<h3 class="heading-lift">Press</h3>
-		<?php week2( $_GET["pressRM"] );?>
+		<?php 
+			calculateWave( $pressRM, 2, 70, 80, 90 ); 
+			if ( $Edmar == 'Yes' ) {
+				include ROOT_DIR.'/includes/assistance-bench.php';
+			} else {
+				include ROOT_DIR.'/includes/assistance-press.php';	
+			}
+		?>
 
-		<span class="cell span-heading">Assistance: </span>
-		<span class="cell">Lats, Upper Back, Triceps, Biceps</span>
-			
-	</section>
-
-	<section class="lift">
-	
-			<h3 class="heading-lift">Deadlift</h3>
-			<?php week2( $_GET["deadliftRM"] );?>
-	
-			<span class="cell span-heading">Assistance: </span>
-			<span class="cell">Hipthrust, Hamstrings, Lower Back, Abs</span>
-	
 	</section>
 
 	<section class="lift">
 	
-			<h3 class="heading-lift">Bench</h3>
-			<?php week2( $_GET["benchRM"] );?>
-	
-			<span class="cell span-heading">Assistance: </span>
-			<span class="cell">Lats, Upper Back, Triceps, Biceps</span>
+		<h3 class="heading-lift">Deadlift</h3>
+		<?php 
+			calculateWave( $deadliftRM, 2, 70, 80, 90 ); 
+			if ( $Edmar == 'Yes' ) {
+				include ROOT_DIR.'/includes/assistance-squat.php';
+			} else {
+				include ROOT_DIR.'/includes/assistance-deadlift.php';	
+			}
+		?>
 	
 	</section>
-	
+
 	<section class="lift">
 	
-			<h3 class="heading-lift">Squat</h3>
-			<?php week2( $_GET["squatRM"] );?>
+		<h3 class="heading-lift">Bench</h3>
+		<?php 
+			calculateWave( $benchRM, 2, 70, 80, 90 ); 
+			if ( $Edmar == 'Yes' ) {
+				include ROOT_DIR.'/includes/assistance-press.php';
+			} else {
+				include ROOT_DIR.'/includes/assistance-bench.php';	
+			}
+		?>
+
+	</section>
+
+	<section class="lift">
 	
-			<span class="cell span-heading">Assistance: </span>
-			<span class="cell">Hipthrust, Hamstrings, Lower Back, Abs</span>
+		<h3 class="heading-lift">Squat</h3>
+		<?php 
+			calculateWave( $squatRM, 2, 70, 80, 90 ); 
+			if ( $Edmar == 'Yes' ) {
+				include ROOT_DIR.'/includes/assistance-deadlift.php';
+			} else {
+				include ROOT_DIR.'/includes/assistance-squat.php';	
+			}
+		?>
 	
 	</section>
-</article><?php // .wave-2 ?>
+
+</article>
+
+
+<!------------------ WAVE 3 ---------------->
 
 <article class="wave-3">
 	<div class="heading">
@@ -145,47 +189,78 @@
 	<section class="lift">
 	
 		<h3 class="heading-lift">Press</h3>
-		<?php week3( $_GET["pressRM"] );?>
+		<?php 
+			calculateWave( $pressRM, 3, 75, 85, 95 ); 
+			if ( $Edmar == 'Yes' ) {
+				include ROOT_DIR.'/includes/assistance-bench.php';
+			} else {
+				include ROOT_DIR.'/includes/assistance-press.php';	
+			}
+		?>
 
-		<span class="cell span-heading">Assistance: </span>
-		<span class="cell">Lats, Upper Back, Triceps, Biceps</span>
-			
 	</section>
 
 	<section class="lift">
 	
-			<h3 class="heading-lift">Deadlift</h3>
-			<?php week3( $_GET["deadliftRM"] );?>
-	
-			<span class="cell span-heading">Assistance: </span>
-			<span class="cell">Hipthrust, Hamstrings, Lower Back, Abs</span>
+		<h3 class="heading-lift">Deadlift</h3>
+		<?php 
+			calculateWave( $deadliftRM, 3, 75, 85, 95 ); 
+			if ( $Edmar == 'Yes' ) {
+				include ROOT_DIR.'/includes/assistance-squat.php';
+			} else {
+				include ROOT_DIR.'/includes/assistance-deadlift.php';	
+			}
+		?>
 	
 	</section>
 
 	<section class="lift">
 	
-			<h3 class="heading-lift">Bench</h3>
-			<?php week3( $_GET["benchRM"] );?>
-	
-			<span class="cell span-heading">Assistance: </span>
-			<span class="cell">Lats, Upper Back, Triceps, Biceps</span>
-	
+		<h3 class="heading-lift">Bench</h3>
+		<?php 
+			calculateWave( $benchRM, 3, 75, 85, 95 ); 
+			if ( $Edmar == 'Yes' ) {
+				include ROOT_DIR.'/includes/assistance-press.php';
+			} else {
+				include ROOT_DIR.'/includes/assistance-bench.php';	
+			}
+		?>
+
 	</section>
-	
+
 	<section class="lift">
 	
-			<h3 class="heading-lift">Squat</h3>
-			<?php week3( $_GET["squatRM"] );?>
-	
-			<span class="cell span-heading">Assistance: </span>
-			<span class="cell">Hipthrust, Hamstrings, Lower Back, Abs</span>
+		<h3 class="heading-lift">Squat</h3>
+		<?php 
+			calculateWave( $squatRM, 3, 75, 85, 95 ); 
+			if ( $Edmar == 'Yes' ) {
+				include ROOT_DIR.'/includes/assistance-deadlift.php';
+			} else {
+				include ROOT_DIR.'/includes/assistance-squat.php';	
+			}
+		?>
 	
 	</section>
-</article><?php // .wave-2 ?>
-	
 
+</article>
 
-	<!-- //////////////////	CHARTS //////////////////-->
+<!---------- NEW PROGRAM -------->
+
+	<section class="weight-input">
+		<h2>Three new heavier waves</h2>
+		<form action="result.php" method="get">
+		Name: <input type="text" name="name" value="Bea"><br>
+		Press: <input type="text" name="pressRM" value="<?php echo $pressRM + 2.5; ?>"><br>
+		Deadlift: <input type="text" name="deadliftRM" value="<?php echo $deadliftRM + 5; ?>"><br>
+		Bench: <input type="text" name="benchRM" value="<?php echo $benchRM + 2.5; ?>"><br>
+		Squat: <input type="text" name="squatRM" value="<?php echo $squatRM + 2.5; ?>"><br>
+
+		Edmar it up: <input type="checkbox" name="Edmar" value="Yes" /><br>
+
+		<input type="submit">
+	</section>
+
+	<!---------------------	CHARTS ---------------------->
 	<section class="charts">
 		<?php 
 			include(ROOT_DIR.'/includes/google-charts-api.php'); 

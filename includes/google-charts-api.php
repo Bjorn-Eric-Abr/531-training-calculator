@@ -1,6 +1,6 @@
 <?php 
   function sumLifts( $lift ) {
-    $sumWave1 : $lift * 
+
   }
  ?>
 
