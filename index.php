@@ -10,7 +10,7 @@ include(ROOT_DIR. '/includes/header.php');
             <label for="pressRM">Press: </label>
             <input type="text" name="pressRM" required="required" value="100">
             <br>
-            <label for="deadliftRM">Deadlift: </label>
+            <label for="deadliftRM">Deadlifts: </label>
             <input type="text" name="deadliftRM" required="required" value="220">
             <br>
             <label for="benchRM">Bench: </label>
