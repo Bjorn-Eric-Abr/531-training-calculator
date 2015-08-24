@@ -1,0 +1,65 @@
+h1,
+h2,
+h3 {
+    line-height: 1;
+    font-weight: 300;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+    font-weight: 300;
+}
+
+h1.logo,
+h1 {
+    margin: 0.5em 0;
+    font-size: 2.617em;
+}
+
+h2 {
+    font-size: 1.618em;
+    margin: 1.5em 0 0.5em 0;
+}
+
+p {
+    margin: 1.3em 0;
+    max-width: 544px;
+}
+
+/*--------------------------------------------------------------
+		Site stuff type
+--------------------------------------------------------------*/
+.heading {
+    background: $spray;
+}
+
+h2.heading-athlete-name {
+    padding: 2rem;
+}
+
+.span {
+    &-warmup {
+        color: gray;
+    }
+    &-heading {
+        font-weight: 600;
+    }
+    &-final-set {
+        color: red;
+    }
+}
+
+.heading--smallcaps {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02rem;
+    color: $smoke;
+    .--heading {
+        font-size: 1.6rem;
+        display: block;
+        color: white;
+        margin-top: 0.25rem;
+    }
+}

@@ -1,0 +1,87 @@
+/*--------------------------------------------------------------
+        General settings
+--------------------------------------------------------------*/
+
+html * {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+body {
+    font-family: Ubuntu;
+    line-height: 1.3;
+    &.open-sans {
+        font-family: 'Open Sans';
+        font-size: 15px;
+    }
+}
+
+/*--------------------------------------------------------------
+        Mixins
+--------------------------------------------------------------*/
+
+@mixin at-breakpoint($point) {
+    @media (min-width: $point) { 
+      @content; 
+    }
+}
+
+/////// COLORS /////////
+$lightGray: #ECECEC;
+$sandstorm: #F9BF3B;
+$spray: #81CFE0;
+$wistful: #AEA8D3;
+$wisteria: #BE90D4;
+$razzmatazz: #DB0A5B;
+$tahiti: #E87E04;
+$smoke: #ECECEC;
+//-- Variables --
+$fontStack: 'Roboto',
+Helvetica,
+Arial,
+sans-serif;
+$medium: 639px;
+body {
+    font-family: $fontStack;
+    margin: 0 auto;
+    background: $smoke;
+    & * {
+        box-sizing: border-box;
+    }
+}
+
+.layout---line {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+    @media ( min-width: $medium) {
+        align-items: flex-start;
+        flex-direction: row;
+    } //
+}
+
+.layout---unit {
+    flex: 1;
+    width: 100%;
+}
+
+.layout--weightRM-box {
+    text-align: center;
+    align-items: center;
+    color: white;
+    .layout---unit {
+        padding: 1em 0;
+        margin: 0 auto;
+        background: $wistful;
+        @media (min-width: $medium) {
+            max-width: 50%;
+            margin-bottom: 2em;
+        }
+    }
+}

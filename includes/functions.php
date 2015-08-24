@@ -17,21 +17,25 @@
 			$set3 = 3;
 		} elseif ( $waveNr == 3 ) {
 			$set1 = 5;
-			$set2 = 3;
+		$set2 = 3;
 			$set3 = 1;
 		}	
 ?>
-
-
-		<div class="main-lifts">
-			<span class="cell span-warmup"><?php echo 5 * floor( $weightTM*0.4 / 5 );  ?> * 5</span>
-			<span class="cell span-warmup"><?php echo 5 * floor( $weightTM*0.5 / 5 );  ?> * 5</span>
-			<span class="cell span-warmup"><?php echo 5 * floor( $weightTM*0.6 / 5 );  ?> * 3</span>
-			
-			<!------------ Main Lifts ------------>
-			<span class="cell"><?php echo 5 * floor($weightTM*$perc1dec / 5 ) . ' * ' . $set1; ?></span>
-			<span class="cell"><?php echo 5 * floor($weightTM*$perc2dec / 5 ) . ' * ' . $set2; ?></span>
-			<span class="cell span-final-set"><?php echo 5 * floor($weightTM*$perc3dec / 5 ) . ' * ' . $set3 . '+'; ?></span>
-		</div><?php // .main-lifts ?>
-
-<?php		} ;?>
+    <div class="main-lifts">
+        <span class="cell span-warmup"><?php echo 5 * floor( $weightTM*0.4 / 5 );  ?> * 5</span>
+        <span class="cell span-warmup"><?php echo 5 * floor( $weightTM*0.5 / 5 );  ?> * 5</span>
+        <span class="cell span-warmup"><?php echo 5 * floor( $weightTM*0.6 / 5 );  ?> * 3</span>
+        <!------------ Main Lifts ------------>
+        <span class="cell"><?php echo 2.5 * floor($weightTM*$perc1dec / 2.5 ) . ' * ' . $set1; ?></span>
+        <span class="cell"><?php echo 2.5 * floor($weightTM*$perc2dec / 2.5 ) . ' * ' . $set2; ?></span>
+        <span class="cell span-final-set"><?php echo 2.5 * floor($weightTM*$perc3dec / 2.5 ) . ' * ' . $set3 . '+'; ?></span>
+    </div>
+    <?php // .main-lifts ?>
+        <div class="summary">
+            <div class="total">
+                <span class="cell  span-heading span-warmup">
+				Main lift: <?php echo (($weightTM*$perc1dec)*$set1) + (($weightTM*$perc2dec)*$set2) + (($weightTM*$perc3dec)*$set3); ?>
+			</span>
+            </div>
+        </div>
+        <?php		} ;?>
