@@ -10,6 +10,7 @@ h2,
 h3 {
     line-height: 1;
     font-weight: 300;
+    margin-bottom: 1rem;
 }
 
 h1.logo,
@@ -28,15 +29,17 @@ p {
     max-width: 544px;
 }
 
+
 /*--------------------------------------------------------------
 		Site stuff type
 --------------------------------------------------------------*/
-.heading {
-    background: $spray;
-}
 
 h2.heading-athlete-name {
     padding: 2rem;
+}
+
+.type--heading-wave {
+    margin-bottom: 0;
 }
 
 .span {
@@ -47,19 +50,44 @@ h2.heading-athlete-name {
         font-weight: 600;
     }
     &-final-set {
-        color: red;
+        color: $razzmatazz;
     }
 }
 
 .heading--smallcaps {
     font-size: 0.8rem;
+    line-height: 1.3;
     text-transform: uppercase;
     letter-spacing: 0.02rem;
-    color: $smoke;
-    .--heading {
-        font-size: 1.6rem;
-        display: block;
-        color: white;
-        margin-top: 0.25rem;
+    color: #888;
+    margin-bottom: 0;
+    .summary & {
+        font-size: 0.8rem;
     }
+}
+
+.heading--smallcaps-main {
+    margin-bottom: 1em;
+}
+
+.result--heading {
+    font-size: 1.6rem;
+    display: block;
+    margin-top: 0.25rem;
+    color: #444;
+}
+
+.result--heading-plus {
+    font-size: 0.8rem;
+    display: inline;
+    margin-top: 0.25rem;
+    color: #444;
+}
+
+.visual--color-primary {
+    color: $razzmatazz;
+}
+
+.visual--color-back {
+    color: $spray;
 }

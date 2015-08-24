@@ -20,13 +20,14 @@ body {
     }
 }
 
+
 /*--------------------------------------------------------------
         Mixins
 --------------------------------------------------------------*/
 
 @mixin at-breakpoint($point) {
-    @media (min-width: $point) { 
-      @content; 
+    @media (min-width: $point) {
+        @content;
     }
 }
 
@@ -74,14 +75,15 @@ body {
 .layout--weightRM-box {
     text-align: center;
     align-items: center;
-    color: white;
+    padding: 0 2rem;
     .layout---unit {
-        padding: 1em 0;
-        margin: 0 auto;
-        background: $wistful;
-        @media (min-width: $medium) {
+        border: 2px solid $razzmatazz;
+        padding: 1rem 0 2rem 0;
+        background: white;
+        margin-bottom: 2em;
+        @include at-breakpoint( $medium) {
             max-width: 50%;
-            margin-bottom: 2em;
+            margin: 0 auto;
         }
     }
 }

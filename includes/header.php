@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
     <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
-    <link rel="stylesheet" href="css/style.css?v=1.0">
+    <link rel="stylesheet" href="css/style.css?v=0.0.1">
     <!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -17,6 +17,9 @@
 
 <body>
     <header>
-        <h1 class="type--site-title">5 / 3 / 1</h1>
-        <h2 class="type--site-description">– another training calculator</h2>
+        <h1 class="
+        type--site-title 
+        visual--color-primary
+        ">5 / 3 / 1</h1>
+        <h2 class="type--site-description visual--color-back">– another training calculator</h2>
     </header>

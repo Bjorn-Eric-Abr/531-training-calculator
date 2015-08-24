@@ -27,16 +27,16 @@ include(ROOT_DIR.'/includes/functions.php');
             //---- Echo out atlethe name
             $name = $_GET["name"];
             if ( isset( $name ) ) {
-                echo '<h2 class="heading--smallcaps">LIFTER <span class="--heading">'.$_GET["name"].'</span></h2>';
+                echo '<h2 class="heading--smallcaps">LIFTER <span class="result--heading">'.$_GET["name"].'</span></h2>';
             } 
             //---- Echo weights
-            echo '<h2 class="heading--smallcaps">press <span class="--heading">' . $name = $_GET["pressRM"] . '</span></h2>'; 
+            echo '<h2 class="heading--smallcaps">press <span class="result--heading">' . $name = $_GET["pressRM"] . '</span></h2>'; 
 
-            echo '<h2 class="heading--smallcaps">deadlift <span class="--heading">' . $name = $_GET["deadliftRM"] . '</span></h2>'; 
+            echo '<h2 class="heading--smallcaps">deadlift <span class="result--heading">' . $name = $_GET["deadliftRM"] . '</span></h2>'; 
 
-            echo '<h2 class="heading--smallcaps">benchpress <span class="--heading">' . $name = $_GET["benchRM"] . '</span></h2>'; 
+            echo '<h2 class="heading--smallcaps">benchpress <span class="result--heading">' . $name = $_GET["benchRM"] . '</span></h2>'; 
 
-            echo '<h2 class="heading--smallcaps">squat <span class="--heading">' . $name = $_GET["squatRM"] . '</span></h2>'; 
+            echo '<h2 class="heading--smallcaps">squat <span class="result--heading">' . $name = $_GET["squatRM"] . '</span></h2>'; 
         ?>
     </div>
 </div>
@@ -46,7 +46,7 @@ include(ROOT_DIR.'/includes/functions.php');
     <!------------------ WAVE 1 ---------------->
     <article class="wave-1 layout---unit">
         <div class="heading">
-            <h3 class="heading-wave">Wave 1</h3>
+            <h3 class="type--heading-wave">Wave 1</h3>
         </div>
 
 
@@ -115,7 +115,7 @@ include(ROOT_DIR.'/includes/functions.php');
 
 <article class="wave-2 layout---unit">
 	<div class="heading">
-		<h3 class="heading-wave">Wave 2</h3>
+		<h3 class="type--heading-wave">Wave 2</h3>
 	</div>
 
 
@@ -182,7 +182,7 @@ include(ROOT_DIR.'/includes/functions.php');
 
 <article class="wave-3 layout---unit">
 	<div class="heading">
-		<h3 class="heading-wave">Wave 3</h3>
+		<h3 class="type--heading-wave">Wave 3</h3>
 	</div>
 
 
@@ -270,13 +270,11 @@ include(ROOT_DIR.'/includes/functions.php');
         <input type="submit">
 </section>
 <!---------------------	CHARTS ---------------------->
-<section class="charts">
-    <?php // include(ROOT_DIR. '/includes/google-charts-api.php'); ?>
-</section>
+
 <footer>
 </footer>
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
 <script>
 $('.lift').click(function() {
   $(this).find('.total').fadeToggle( "fast" );

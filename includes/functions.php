@@ -33,8 +33,30 @@
     <?php // .main-lifts ?>
         <div class="summary">
             <div class="total">
-                <span class="cell  span-heading span-warmup">
-				Main lift: <?php echo (($weightTM*$perc1dec)*$set1) + (($weightTM*$perc2dec)*$set2) + (($weightTM*$perc3dec)*$set3); ?>
+                <h3 class="heading--smallcaps heading--smallcaps-main">
+					Main lift:
+					<span class="result--heading">
+						<?php echo floor( (($weightTM*$perc1dec)*$set1) + (($weightTM*$perc2dec)*$set2) + (($weightTM*$perc3dec)*$set3) ); ?>kg
+					</span>
+				</h3>
+				<h3 class="heading--smallcaps">
+					+1: 
+					<span class="result--heading-plus">
+						<?php echo floor( (($weightTM*$perc1dec)*$set1) + (($weightTM*$perc2dec)*$set2) + (($weightTM*$perc3dec)*$set3) + (($weightTM*$perc3dec)*$set3) ); ?>kg
+					</span>
+				</h3>
+				<h3 class="heading--smallcaps">
+					+2: 
+					<span class="result--heading-plus">
+						<?php echo floor( (($weightTM*$perc1dec)*$set1) + (($weightTM*$perc2dec)*$set2) + (($weightTM*$perc3dec)*$set3) + (($weightTM*$perc3dec)*$set3)  + (($weightTM*$perc3dec)*$set3) ); ?>kg
+					</span>
+				</h3>
+				<h3 class="heading--smallcaps">
+					+3: 
+					<span class="result--heading-plus">
+						<?php echo floor( (($weightTM*$perc1dec)*$set1) + (($weightTM*$perc2dec)*$set2) + (($weightTM*$perc3dec)*$set3) + (($weightTM*$perc3dec)*$set3)  + (($weightTM*$perc3dec)*$set3) + (($weightTM*$perc3dec)*$set3) ); ?>kg
+					</span>
+				</h3>
 			</span>
             </div>
         </div>
