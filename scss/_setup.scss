@@ -75,12 +75,11 @@ body {
 .layout--weightRM-box {
     text-align: center;
     align-items: center;
-    padding: 0 2rem;
+    padding: 2rem;
     .layout---unit {
         border: 2px solid $razzmatazz;
         padding: 1rem 0 2rem 0;
         background: white;
-        margin-bottom: 2em;
         @include at-breakpoint( $medium) {
             max-width: 50%;
             margin: 0 auto;
