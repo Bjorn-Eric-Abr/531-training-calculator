@@ -1,0 +1,23 @@
+nav.mobile-nav {
+    display: flex;
+    max-width: 80%;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    text-align: center;
+    margin: 0 auto; // Ugly centering xxx
+    padding-bottom: 3rem;
+    .item {
+        flex: 3;
+        margin: 1em;
+    }
+    .mdl-button--fab.mdl-button--colored-1 {
+        background: $sandstorm;
+    }
+    .mdl-button--fab.mdl-button--colored-2 {
+        background: $tahiti;
+    }
+    .mdl-button--fab.mdl-button--colored-3 {
+        background: $razzmatazz;
+    }
+}

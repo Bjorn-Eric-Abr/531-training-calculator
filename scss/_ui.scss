@@ -28,7 +28,9 @@ header {
 
 .wave-1 {
     border-left: 2px solid $sandstorm;
-    border-bottom: 2px solid $sandstorm;
+    @include at-breakpoint( $medium) {
+        border-bottom: 2px solid $sandstorm;
+    }
     .heading {
         border: 2px solid $sandstorm;
         background: $sandstorm;
