@@ -20,8 +20,8 @@
 <body>
     <header>
         <h1 class="
-        type--site-title 
+        type--site-title
         visual--color-primary
-        ">5 / 3 / 1</h1>
+        ">5 / 3 / 1 <a href="/531">⚜️</a></h1>
         <h2 class="type--site-description visual--color-back">– another training calculator</h2>
     </header>
