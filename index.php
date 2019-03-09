@@ -1,5 +1,4 @@
 <?php
-include(dirname(__FILE__) . '/includes/header.php');
 // echo "<h2>".$_SERVER['HTTP_HOST'] .$_SERVER['REQUEST_URI']. "</h1>";
 // Defaults
 $user             = [];
@@ -22,9 +21,13 @@ if (isset($_COOKIE['user'])) {
     }
 }
 
+/**
+ * Get header
+ */
+include(dirname(__FILE__) . '/includes/header.php');
+
 ?>
 <section class="weight-input">
-    <!-- <form action="action.php" method="post"> -->
     <form action="action.php" method="post">
         <label for="name">Name: </label>
         <input type="text" name="name" required="required" value="<?php echo $user['name']; ?>">
@@ -43,7 +46,10 @@ if (isset($_COOKIE['user'])) {
         <br>
         <span class="label">Edmar it up:<input type="checkbox" name="Edmar" value="Yes"/></span>
         <br>
+        <span class="label">Make it harder:<input type="checkbox" name="harder" value="Yes"/></span>
+        <br>
         <input type="submit">
+    </form>
 </section>
 
 <footer>

@@ -1,8 +1,10 @@
 <?php
+require './vendor/kint.phar';
+
 include(dirname(__FILE__) . '/includes/header.php');
 include(dirname(__FILE__) . '/includes/functions.php');
 
-$user = unserialize($_COOKIE['user']);
+$user = unserialize($_COOKIE['531_user']);
 
 // Se if we should Edmar
 if (isset($user['Edmar'])) {
@@ -48,9 +50,9 @@ if ($user['name'] == "Clara" || $user['name'] == "clara") {
             <?php
             calculateWave($user['press'], 1, 65, 75, 85);
             if ($Edmar == 'Yes') {
-                include(dirname(__FILE__) . '/includes/assistance-bench.php');
+                include(dirname(__FILE__) . '/includes/assistance/bench.php');
             } else {
-                include(dirname(__FILE__) . '/includes/assistance-press.php');
+                include(dirname(__FILE__) . '/includes/assistance/press.php');
             }
             ?>
 
@@ -62,9 +64,9 @@ if ($user['name'] == "Clara" || $user['name'] == "clara") {
             <?php
             calculateWave($user['deadlift'], 1, 65, 75, 85);
             if ($Edmar == 'Yes') {
-                include(dirname(__FILE__) . '/includes/assistance-squat.php');
+                include(dirname(__FILE__) . '/includes/assistance/squat.php');
             } else {
-                include(dirname(__FILE__) . '/includes/assistance-deadlift.php');
+                include(dirname(__FILE__) . '/includes/assistance/deadlift.php');
             }
             ?>
 
@@ -76,9 +78,9 @@ if ($user['name'] == "Clara" || $user['name'] == "clara") {
             <?php
             calculateWave($user['bench'], 1, 65, 75, 85);
             if ($Edmar == 'Yes') {
-                include(dirname(__FILE__) . '/includes/assistance-press.php');
+                include(dirname(__FILE__) . '/includes/assistance/press.php');
             } else {
-                include(dirname(__FILE__) . '/includes/assistance-bench.php');
+                include(dirname(__FILE__) . '/includes/assistance/bench.php');
             }
             ?>
 
@@ -90,9 +92,9 @@ if ($user['name'] == "Clara" || $user['name'] == "clara") {
             <?php
             calculateWave($user['squat'], 1, 65, 75, 85);
             if ($Edmar == 'Yes') {
-                include(dirname(__FILE__) . '/includes/assistance-deadlift.php');
+                include(dirname(__FILE__) . '/includes/assistance/deadlift.php');
             } else {
-                include(dirname(__FILE__) . '/includes/assistance-squat.php');
+                include(dirname(__FILE__) . '/includes/assistance/squat.php');
             }
             ?>
 
@@ -115,9 +117,9 @@ if ($user['name'] == "Clara" || $user['name'] == "clara") {
             <?php
             calculateWave($user['press'], 2, 70, 80, 90);
             if ($Edmar == 'Yes') {
-                include(dirname(__FILE__) . '/includes/assistance-bench.php');
+                include(dirname(__FILE__) . '/includes/assistance/bench.php');
             } else {
-                include(dirname(__FILE__) . '/includes/assistance-press.php');
+                include(dirname(__FILE__) . '/includes/assistance/press.php');
             }
             ?>
 
@@ -129,9 +131,9 @@ if ($user['name'] == "Clara" || $user['name'] == "clara") {
             <?php
             calculateWave($user['deadlift'], 2, 70, 80, 90);
             if ($Edmar == 'Yes') {
-                include(dirname(__FILE__) . '/includes/assistance-squat.php');
+                include(dirname(__FILE__) . '/includes/assistance/squat.php');
             } else {
-                include(dirname(__FILE__) . '/includes/assistance-deadlift.php');
+                include(dirname(__FILE__) . '/includes/assistance/deadlift.php');
             }
             ?>
 
@@ -143,9 +145,9 @@ if ($user['name'] == "Clara" || $user['name'] == "clara") {
             <?php
             calculateWave($user['bench'], 2, 70, 80, 90);
             if ($Edmar == 'Yes') {
-                include(dirname(__FILE__) . '/includes/assistance-press.php');
+                include(dirname(__FILE__) . '/includes/assistance/press.php');
             } else {
-                include(dirname(__FILE__) . '/includes/assistance-bench.php');
+                include(dirname(__FILE__) . '/includes/assistance/bench.php');
             }
             ?>
 
@@ -157,9 +159,9 @@ if ($user['name'] == "Clara" || $user['name'] == "clara") {
             <?php
             calculateWave($user['squat'], 2, 70, 80, 90);
             if ($Edmar == 'Yes') {
-                include(dirname(__FILE__) . '/includes/assistance-deadlift.php');
+                include(dirname(__FILE__) . '/includes/assistance/deadlift.php');
             } else {
-                include(dirname(__FILE__) . '/includes/assistance-squat.php');
+                include(dirname(__FILE__) . '/includes/assistance/squat.php');
             }
             ?>
 
@@ -182,9 +184,9 @@ if ($user['name'] == "Clara" || $user['name'] == "clara") {
             <?php
             calculateWave($user['press'], 3, 75, 85, 95);
             if ($Edmar == 'Yes') {
-                include(dirname(__FILE__) . '/includes/assistance-bench.php');
+                include(dirname(__FILE__) . '/includes/assistance/bench.php');
             } else {
-                include(dirname(__FILE__) . '/includes/assistance-press.php');
+                include(dirname(__FILE__) . '/includes/assistance/press.php');
             }
             ?>
 
@@ -196,9 +198,9 @@ if ($user['name'] == "Clara" || $user['name'] == "clara") {
             <?php
             calculateWave($user['deadlift'], 3, 75, 85, 95);
             if ($Edmar == 'Yes') {
-                include(dirname(__FILE__) . '/includes/assistance-squat.php');
+                include(dirname(__FILE__) . '/includes/assistance/squat.php');
             } else {
-                include(dirname(__FILE__) . '/includes/assistance-deadlift.php');
+                include(dirname(__FILE__) . '/includes/assistance/deadlift.php');
             }
             ?>
 
@@ -210,9 +212,9 @@ if ($user['name'] == "Clara" || $user['name'] == "clara") {
             <?php
             calculateWave($user['bench'], 3, 75, 85, 95);
             if ($Edmar == 'Yes') {
-                include(dirname(__FILE__) . '/includes/assistance-press.php');
+                include(dirname(__FILE__) . '/includes/assistance/press.php');
             } else {
-                include(dirname(__FILE__) . '/includes/assistance-bench.php');
+                include(dirname(__FILE__) . '/includes/assistance/bench.php');
             }
             ?>
 
@@ -224,9 +226,9 @@ if ($user['name'] == "Clara" || $user['name'] == "clara") {
             <?php
             calculateWave($user['squat'], 3, 75, 85, 95);
             if ($Edmar == 'Yes') {
-                include(dirname(__FILE__) . '/includes/assistance-deadlift.php');
+                include(dirname(__FILE__) . '/includes/assistance/deadlift.php');
             } else {
-                include(dirname(__FILE__) . '/includes/assistance-squat.php');
+                include(dirname(__FILE__) . '/includes/assistance/squat.php');
             }
             ?>
 
@@ -269,7 +271,5 @@ if ($user['name'] == "Clara" || $user['name'] == "clara") {
         $(this).find('.total').fadeToggle("fast");
     });
 </script>
-<!-- script src="js/min/develop-min.js"></script-->
 </body>
-
 </html>

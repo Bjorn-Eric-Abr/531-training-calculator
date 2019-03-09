@@ -7,7 +7,8 @@
 		Bench: <input type="text" name="benchRM" value="<?php echo $benchRM + 2.5; ?>"><br>
 		Squat: <input type="text" name="squatRM" value="<?php echo $squatRM + 2.5; ?>"><br>
 
-		Edmar it up: <input type="checkbox" name="Edmar" value="Yes" /><br>
+		Emil Edmar it up: <input type="checkbox" name="Edmar" value="Yes" /><br>
+		Make 5% it harder: <input type="checkbox" name="harder" value="Yes" /><br>
 
 		<input type="submit">
 	</section>

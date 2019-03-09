@@ -1,8 +1,11 @@
 <?php
+
+require './vendor/kint.phar';
+
 function calculateWave($weightRM, $waveNr, $perc1, $perc2, $perc3)
 {
-    $ninety   = 0.9;
-    $weightTM = $weightRM * $ninety;
+    $workPercentage   = unserialize($_COOKIE['531_user'])["harder"] ? 0.95 : 0.90;
+    $weightTM = $weightRM * $workPercentage;
 
     $perc1dec = $perc1 / 100;
     $perc2dec = $perc2 / 100;
@@ -31,35 +34,34 @@ function calculateWave($weightRM, $waveNr, $perc1, $perc2, $perc3)
         <span class="cell"><?php echo 2.5 * floor($weightTM * $perc2dec / 2.5) . ' * ' . $set2; ?></span>
         <span class="cell span-final-set"><?php echo 2.5 * floor($weightTM * $perc3dec / 2.5) . ' * ' . $set3 . '+'; ?></span>
     </div>
-    
+
     <!-- Main lifts -->
     <div class="summary">
         <div class="total">
             <h3 class="heading--smallcaps heading--smallcaps-main">
                 Main lift:
                 <span class="result--heading">
-						<?php echo floor((($weightTM * $perc1dec) * $set1) + (($weightTM * $perc2dec) * $set2) + (($weightTM * $perc3dec) * $set3)); ?>kg
-					</span>
+                    <?php echo floor((($weightTM * $perc1dec) * $set1) + (($weightTM * $perc2dec) * $set2) + (($weightTM * $perc3dec) * $set3)); ?>kg
+                </span>
             </h3>
             <h3 class="heading--smallcaps">
                 +1:
                 <span class="result--heading-plus">
-						<?php echo floor((($weightTM * $perc1dec) * $set1) + (($weightTM * $perc2dec) * $set2) + (($weightTM * $perc3dec) * $set3) + (($weightTM * $perc3dec) * $set3)); ?>kg
-					</span>
+                    <?php echo floor((($weightTM * $perc1dec) * $set1) + (($weightTM * $perc2dec) * $set2) + (($weightTM * $perc3dec) * $set3) + (($weightTM * $perc3dec) * $set3)); ?>kg
+                </span>
             </h3>
             <h3 class="heading--smallcaps">
                 +2:
                 <span class="result--heading-plus">
-						<?php echo floor((($weightTM * $perc1dec) * $set1) + (($weightTM * $perc2dec) * $set2) + (($weightTM * $perc3dec) * $set3) + (($weightTM * $perc3dec) * $set3) + (($weightTM * $perc3dec) * $set3)); ?>kg
-					</span>
+                    <?php echo floor((($weightTM * $perc1dec) * $set1) + (($weightTM * $perc2dec) * $set2) + (($weightTM * $perc3dec) * $set3) + (($weightTM * $perc3dec) * $set3) + (($weightTM * $perc3dec) * $set3)); ?>kg
+                </span>
             </h3>
             <h3 class="heading--smallcaps">
                 +3:
                 <span class="result--heading-plus">
-						<?php echo floor((($weightTM * $perc1dec) * $set1) + (($weightTM * $perc2dec) * $set2) + (($weightTM * $perc3dec) * $set3) + (($weightTM * $perc3dec) * $set3) + (($weightTM * $perc3dec) * $set3) + (($weightTM * $perc3dec) * $set3)); ?>kg
-					</span>
+                    <?php echo floor((($weightTM * $perc1dec) * $set1) + (($weightTM * $perc2dec) * $set2) + (($weightTM * $perc3dec) * $set3) + (($weightTM * $perc3dec) * $set3) + (($weightTM * $perc3dec) * $set3) + (($weightTM * $perc3dec) * $set3)); ?>kg
+                </span>
             </h3>
-            </span>
         </div>
     </div>
 <?php } ?>
