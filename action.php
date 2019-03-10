@@ -17,7 +17,7 @@ $user_data = [
 $time = time();
 $user_data_serialized = serialize($user_data);
 
-setcookie("531_user", $user_data_serialized, ($time + 32140800));
+setcookie("531_user", $user_data_serialized, ($time + 32140800), "/", true, true);
 
 if (!isset($_COOKIE["531_user"])) {
     die('Could not set Cookie :(');
