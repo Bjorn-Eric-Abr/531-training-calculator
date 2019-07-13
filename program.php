@@ -1,19 +1,15 @@
 <?php
 require './vendor/kint.phar';
 
-include(dirname(__FILE__) . '/lib/header.php');
-include(dirname(__FILE__) . '/lib/functions.php');
+include __DIR__ . '/lib/header.php';
+include __DIR__ . '/lib/functions.php';
 
 $user = unserialize($_COOKIE['531_user']);
+$user = htmlspecialchars($user);
+$Edmar = isset($user['Edmar']) ? 'Yes' : 'No';
 
-// Se if we should Edmar
-if (isset($user['Edmar'])) {
-    $Edmar = 'Yes';
-} else {
-    $Edmar = 'No';
-}
-if ($user['name'] == "Clara" || $user['name'] == "clara") {
-    $user['name'] = "❤️ Clara ❤️";
+if ($user['name'] === 'Clara' || $user['name'] === 'clara') {
+    $user['name'] = '❤️ Clara ❤️';
 }
 ?>
 
@@ -32,7 +28,7 @@ if ($user['name'] == "Clara" || $user['name'] == "clara") {
 
 </div>
 <!------------------ Mobile Menu ---------------->
-<?php include(dirname(__FILE__) . '/lib/parts-mobilemenu.php'); ?>
+<?php include __DIR__ . '/lib/parts-mobilemenu.php'; ?>
 
 
 <div class="layout---line">
@@ -44,60 +40,48 @@ if ($user['name'] == "Clara" || $user['name'] == "clara") {
         </div>
 
 
-        <section class="lift">
-
+        <section class="lift <?php echo ($user['press'] == 0 ? 'dont-show' : ''); ?>">
             <h3 class="heading-lift">Press</h3>
             <?php
             calculateWave($user['press'], 1, 65, 75, 85);
             if ($Edmar == 'Yes') {
-                include(dirname(__FILE__) . '/lib/assistance/bench.php');
+                include __DIR__ . '/lib/assistance/bench.php';
             } else {
-                include(dirname(__FILE__) . '/lib/assistance/press.php');
-            }
-            ?>
-
+                include __DIR__ . '/lib/assistance/press.php';
+            } ?>
         </section>
 
-        <section class="lift">
-
+        <section class="lift <?php echo ($user['deadlift'] == 0 ? 'dont-show' : ''); ?>">
             <h3 class="heading-lift">Deadlift</h3>
             <?php
             calculateWave($user['deadlift'], 1, 65, 75, 85);
             if ($Edmar == 'Yes') {
-                include(dirname(__FILE__) . '/lib/assistance/squat.php');
+                include __DIR__ . '/lib/assistance/squat.php';
             } else {
-                include(dirname(__FILE__) . '/lib/assistance/deadlift.php');
-            }
-            ?>
-
+                include __DIR__ . '/lib/assistance/deadlift.php';
+            } ?>
         </section>
 
-        <section class="lift">
-
+        <section class="lift <?php echo ($user['bench'] == 0 ? 'dont-show' : ''); ?>">
             <h3 class="heading-lift">Bench</h3>
             <?php
             calculateWave($user['bench'], 1, 65, 75, 85);
-            if ($Edmar == 'Yes') {
-                include(dirname(__FILE__) . '/lib/assistance/press.php');
+            if ($Edmar === 'Yes') {
+                include __DIR__ . '/lib/assistance/press.php';
             } else {
-                include(dirname(__FILE__) . '/lib/assistance/bench.php');
-            }
-            ?>
-
+                include __DIR__ . '/lib/assistance/bench.php';
+            } ?>
         </section>
 
-        <section class="lift">
-
+        <section class="lift <?php echo ($user['squat'] == 0 ? 'dont-show' : ''); ?>">
             <h3 class="heading-lift">Squat</h3>
             <?php
             calculateWave($user['squat'], 1, 65, 75, 85);
-            if ($Edmar == 'Yes') {
-                include(dirname(__FILE__) . '/lib/assistance/deadlift.php');
+            if ($Edmar === 'Yes') {
+                include __DIR__ . '/lib/assistance/deadlift.php';
             } else {
-                include(dirname(__FILE__) . '/lib/assistance/squat.php');
-            }
-            ?>
-
+                include __DIR__ . '/lib/assistance/squat.php';
+            } ?>
         </section>
 
     </article>
@@ -111,60 +95,48 @@ if ($user['name'] == "Clara" || $user['name'] == "clara") {
         </div>
 
 
-        <section class="lift">
-
+        <section class="lift <?php echo ($user['press'] == 0 ? 'dont-show' : ''); ?>">
             <h3 class="heading-lift">Press</h3>
             <?php
             calculateWave($user['press'], 2, 70, 80, 90);
             if ($Edmar == 'Yes') {
-                include(dirname(__FILE__) . '/lib/assistance/bench.php');
+                include __DIR__ . '/lib/assistance/bench.php';
             } else {
-                include(dirname(__FILE__) . '/lib/assistance/press.php');
-            }
-            ?>
-
+                include __DIR__ . '/lib/assistance/press.php';
+            } ?>
         </section>
 
-        <section class="lift">
-
+        <section class="lift <?php echo ($user['deadlift'] == 0 ? 'dont-show' : ''); ?>">
             <h3 class="heading-lift">Deadlift</h3>
             <?php
             calculateWave($user['deadlift'], 2, 70, 80, 90);
             if ($Edmar == 'Yes') {
-                include(dirname(__FILE__) . '/lib/assistance/squat.php');
+                include __DIR__ . '/lib/assistance/squat.php';
             } else {
-                include(dirname(__FILE__) . '/lib/assistance/deadlift.php');
-            }
-            ?>
-
+                include __DIR__ . '/lib/assistance/deadlift.php';
+            } ?>
         </section>
 
-        <section class="lift">
-
+        <section class="lift <?php echo ($user['bench'] == 0 ? 'dont-show' : ''); ?>">
             <h3 class="heading-lift">Bench</h3>
             <?php
             calculateWave($user['bench'], 2, 70, 80, 90);
             if ($Edmar == 'Yes') {
-                include(dirname(__FILE__) . '/lib/assistance/press.php');
+                include __DIR__ . '/lib/assistance/press.php';
             } else {
-                include(dirname(__FILE__) . '/lib/assistance/bench.php');
-            }
-            ?>
-
+                include __DIR__ . '/lib/assistance/bench.php';
+            } ?>
         </section>
 
-        <section class="lift">
-
+        <section class="lift <?php echo ($user['squat'] == 0 ? 'dont-show' : ''); ?>">
             <h3 class="heading-lift">Squat</h3>
             <?php
             calculateWave($user['squat'], 2, 70, 80, 90);
             if ($Edmar == 'Yes') {
-                include(dirname(__FILE__) . '/lib/assistance/deadlift.php');
+                include __DIR__ . '/lib/assistance/deadlift.php';
             } else {
-                include(dirname(__FILE__) . '/lib/assistance/squat.php');
-            }
-            ?>
-
+                include __DIR__ . '/lib/assistance/squat.php';
+            } ?>
         </section>
 
     </article>
@@ -178,60 +150,48 @@ if ($user['name'] == "Clara" || $user['name'] == "clara") {
         </div>
 
 
-        <section class="lift">
-
+        <section class="lift <?php echo ($user['press'] == 0 ? 'dont-show' : ''); ?>">
             <h3 class="heading-lift">Press</h3>
             <?php
             calculateWave($user['press'], 3, 75, 85, 95);
             if ($Edmar == 'Yes') {
-                include(dirname(__FILE__) . '/lib/assistance/bench.php');
+                include __DIR__ . '/lib/assistance/bench.php';
             } else {
-                include(dirname(__FILE__) . '/lib/assistance/press.php');
-            }
-            ?>
-
+                include __DIR__ . '/lib/assistance/press.php';
+            } ?>
         </section>
 
-        <section class="lift">
-
+        <section class="lift <?php echo ($user['deadlift'] == 0 ? 'dont-show' : ''); ?>">
             <h3 class="heading-lift">Deadlift</h3>
             <?php
             calculateWave($user['deadlift'], 3, 75, 85, 95);
             if ($Edmar == 'Yes') {
-                include(dirname(__FILE__) . '/lib/assistance/squat.php');
+                include __DIR__ . '/lib/assistance/squat.php';
             } else {
-                include(dirname(__FILE__) . '/lib/assistance/deadlift.php');
-            }
-            ?>
-
+                include __DIR__ . '/lib/assistance/deadlift.php';
+            } ?>
         </section>
 
-        <section class="lift">
-
+        <section class="lift <?php echo ($user['bench'] == 0 ? 'dont-show' : ''); ?>">
             <h3 class="heading-lift">Bench</h3>
             <?php
             calculateWave($user['bench'], 3, 75, 85, 95);
             if ($Edmar == 'Yes') {
-                include(dirname(__FILE__) . '/lib/assistance/press.php');
+                include __DIR__ . '/lib/assistance/press.php';
             } else {
-                include(dirname(__FILE__) . '/lib/assistance/bench.php');
-            }
-            ?>
-
+                include __DIR__ . '/lib/assistance/bench.php';
+            } ?>
         </section>
 
-        <section class="lift">
-
+        <section class="lift <?php echo ($user['squat'] == 0 ? 'dont-show' : ''); ?>">
             <h3 class="heading-lift">Squat</h3>
             <?php
             calculateWave($user['squat'], 3, 75, 85, 95);
             if ($Edmar == 'Yes') {
-                include(dirname(__FILE__) . '/lib/assistance/deadlift.php');
+                include __DIR__ . '/lib/assistance/deadlift.php';
             } else {
-                include(dirname(__FILE__) . '/lib/assistance/squat.php');
-            }
-            ?>
-
+                include __DIR__ . '/lib/assistance/squat.php';
+            } ?>
         </section>
 
     </article>
