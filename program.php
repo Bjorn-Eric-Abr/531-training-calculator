@@ -5,7 +5,6 @@ include __DIR__ . '/lib/header.php';
 include __DIR__ . '/lib/functions.php';
 
 $user = unserialize($_COOKIE['531_user']);
-$user = htmlspecialchars($user);
 $Edmar = isset($user['Edmar']) ? 'Yes' : 'No';
 
 if ($user['name'] === 'Clara' || $user['name'] === 'clara') {
