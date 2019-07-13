@@ -2,81 +2,85 @@ header,
 footer,
 .heading,
 .weight-input {
-    padding: 2rem;
+  padding: 2rem;
 }
 
 header {
-    @include at-breakpoint( $medium) {
-        max-width: 50%;
-        margin: 0 auto;
-    }
+  @include at-breakpoint($medium) {
+    max-width: 50%;
+    margin: 0 auto;
+  }
 }
 
 .lift {
-    padding: 2rem;
-    position: relative;
-    &:nth-child(even) {
-        background: white;
-    }
+  padding: 2rem;
+  position: relative;
+
+  &:nth-child(even) {
+    background: white;
+  }
 }
 
 .wave-1,
 .wave-2,
 .wave-3 {
-    //margin:0.25em;
+  //margin:0.25em;
 }
 
 .wave-1 {
-    border-left: 2px solid $sandstorm;
-    @include at-breakpoint( $medium) {
-        border-bottom: 2px solid $sandstorm;
-    }
-    .heading {
-        border: 2px solid $sandstorm;
-        background: $sandstorm;
-        color: white;
-    }
+  border-left: 2px solid $sandstorm;
+  @include at-breakpoint($medium) {
+    border-bottom: 2px solid $sandstorm;
+  }
+
+  .heading {
+    border: 2px solid $sandstorm;
+    background: $sandstorm;
+    color: white;
+  }
 }
 
 .wave-2 {
-    border-left: 2px solid $tahiti;
-    border-bottom: 2px solid $tahiti;
-    .heading {
-        border: 2px solid $tahiti;
-        background: $tahiti;
-        color: white;
-    }
+  border-left: 2px solid $tahiti;
+  border-bottom: 2px solid $tahiti;
+
+  .heading {
+    border: 2px solid $tahiti;
+    background: $tahiti;
+    color: white;
+  }
 }
 
 .wave-3 {
-    border-left: 2px solid $razzmatazz;
-    border-bottom: 2px solid $razzmatazz;
-    .heading {
-        border: 2px solid $razzmatazz;
-        background: $razzmatazz;
-        color: white;
-    }
+  border-left: 2px solid $razzmatazz;
+  border-bottom: 2px solid $razzmatazz;
+
+  .heading {
+    border: 2px solid $razzmatazz;
+    background: $razzmatazz;
+    color: white;
+  }
 }
 
 .main-lifts {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 .cell {
-    padding: 1em 0.5em 1em 0;
+  padding: 1em 0.5em 1em 0;
 }
 
 //------  Toggle the total
 .total {
-    background: white;
-    //color: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 1rem;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    display: none;
-    padding-right: 2rem;
+  background: white;
+  //color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  display: none;
+  padding-right: 2rem;
 }
