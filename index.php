@@ -1,12 +1,12 @@
 <?php
-// echo "<h2>".$_SERVER['HTTP_HOST'] .$_SERVER['REQUEST_URI']. "</h1>";
+
 // Defaults
 $user             = [];
-$user['name']     = "";
-$user['press']    = "";
-$user['deadlift'] = "";
-$user['bench']    = "";
-$user['squat']    = "";
+$user['name']     = '';
+$user['press']    = '';
+$user['deadlift'] = '';
+$user['bench']    = '';
+$user['squat']    = '';
 
 // Get cookie
 if (isset($_COOKIE['user'])) {
@@ -24,7 +24,7 @@ if (isset($_COOKIE['user'])) {
 /**
  * Get header
  */
-include(dirname(__FILE__) . '/lib/header.php');
+include __DIR__ . '/lib/header.php';
 
 ?>
 <section class="weight-input">
