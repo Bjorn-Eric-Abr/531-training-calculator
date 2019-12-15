@@ -9,7 +9,7 @@ $user['bench'] = '';
 $user['squat'] = '';
 
 // Get cookie
-if (isset($_COOKIE['user'])) {
+if (isset($_COOKIE['531_user'])) {
     $user = unserialize($_COOKIE['531_user']);
 
     // Get previous settings (if any)
