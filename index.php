@@ -1,16 +1,16 @@
 <?php
 
 // Defaults
-$user             = [];
-$user['name']     = '';
-$user['press']    = '';
+$user = [];
+$user['name'] = '';
+$user['press'] = '';
 $user['deadlift'] = '';
-$user['bench']    = '';
-$user['squat']    = '';
+$user['bench'] = '';
+$user['squat'] = '';
 
 // Get cookie
 if (isset($_COOKIE['user'])) {
-    $user = unserialize($_COOKIE['user']);
+    $user = unserialize($_COOKIE['531_user']);
 
     // Get previous settings (if any)
     foreach ($user as $key => $value) {
@@ -55,8 +55,8 @@ include __DIR__ . '/lib/header.php';
 <footer>
     Denna sida använder cookies (inte riktiga kakor 😔).
 </footer>
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 </body>
 
 </html>
