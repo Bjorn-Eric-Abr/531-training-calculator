@@ -16,11 +16,11 @@ img {
 }
 
 body {
-  font-family: Ubuntu;
+  font-family: Ubuntu, sans-serif;
   line-height: 1.3;
 }
 body.open-sans {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-size: 15px;
 }
 
