@@ -1,6 +1,5 @@
 <?php
 
-// Defaults
 $user = [];
 $user['name'] = '';
 $user['press'] = '';
@@ -10,20 +9,13 @@ $user['squat'] = '';
 
 // Get cookie
 if (isset($_COOKIE['531_user'])) {
-    $user = unserialize($_COOKIE['531_user']);
+    $user = unserialize($_COOKIE['531_user'], ['']);
 
-    // Get previous settings (if any)
     foreach ($user as $key => $value) {
-        // echo $key ." is set to ". $value ."<br />";
-
-        // Populate user array
         $user[$key] = $value;
     }
 }
 
-/**
- * Get header
- */
 include __DIR__ . '/lib/header.php';
 
 ?>
